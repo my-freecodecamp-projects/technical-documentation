@@ -1,3 +1,10 @@
+/* CSS stylesheet for HTML document, technical-document.html */
+
+
+/* The body with standard settings and the creation of the grid.
+There will be a narrow navigation bar along the left hand side
+and the main article will be on the right hand side. */
+
 body {
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
@@ -6,12 +13,28 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
         "nav main main main main";
+    gap: 20px;
+    box-sizing: border-box;
 }
 
+/* Naming the grid areas */
 #nav-bar {
     grid-area: nav;
 }
-
 #main-doc {
     grid-area: main;
+}
+
+/* Basic box formatting for both the main section and the
+navigation bar */
+nav, main {
+    margin-top: 15px;
+    padding: 20px;
+}
+
+nav {
+    margin-left: 25px;
+}
+main {
+    margin-right: 30px;
 }
