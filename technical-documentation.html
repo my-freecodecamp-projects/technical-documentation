@@ -30,27 +30,134 @@
     <main id="main-doc">
         <section class="main-section" id="ground-rules">
             <header>Set the Ground Rules</header>
-            
+            <p>It’s hard to get on the documentation bandwagon when it’s not clear to you
+                and your team what to document or how you want it to work. So the first step 
+                is to agree on which conventions you’ll use and how you should implement 
+                them. You can do this in a live document so everybody on the team can 
+                contribute. In this way, as your approach changes or becomes more 
+                comprehensive, you can keep it up-to-date. A shared Google doc, a wiki page 
+                on your code repo, or (even better) a page on your “living style guide” are 
+                all great places for this.</p>
+                <p>Now let’s looks at the actual “ground rules” that you can include.</p>
         </section>
         <section class="main-section" id="structure">
             <header>Explain the Structure of your Code Base</header>
-            
+            <p>Understanding how your code is organized allows anybody to jump straight into 
+                the action from day one. A simple way of doing this is creating a map of your 
+                file structure where you can explain what’s in it and what should go where. When 
+                doing this pay special attention to those places where there could be ambiguity. 
+                For instance, indicating that the file “buttons.css” contains styles for buttons 
+                is not very helpful, but indicating that the “custom” directory is where custom 
+                styles for the theme are located can be a time saver.</p>
+            <p>Here’s an example:</p>
+            <code>Project Root<br>
+            └── srs<br>
+            .    ├── styles               // Base styles. Styles placed here should be available 
+            anywhere in the application<br>
+            .        ├── bootstrap-custom // Custom styles that overwrite bootstrap<br>
+            .        ├── custom           // Custom styles created for the application<br>
+            .        ├── demos            // Demos to illustrate styles and interactions for the 
+            style guide<br>
+            .        ├── fonts<br>           
+            .        ├── img              // Images used ONLY in stylesheets<br>
+            .        ├── variables        // Variables used in the custom theme<br>
+            .        └── styles.less      // Imports of all the base stylesheets</code>
+            <p>As a rule of thumb, document those places where clarification is needed. Not 
+                every directory and file will need documentation (like in the above example 
+                “fonts” is self-explanatory). Put yourself in the shoes of somebody new to the 
+                project (or remember those times where you were that person) and provide the 
+                guidance you wish you would have been given. The idea is to do this in a way 
+                that’s not time-consuming for you but is helpful enough to avoid repetitive 
+                questions.</p>
+            <p>Another key element to point out here is where new styles should be added and
+                any steps that should be followed. The example above demonstrates this, but given 
+                the inheritance nature of CSS, it can be worthwhile to state it in detail.</p>
         </section>
         <section class="main-section" id="coding-standards">
             <header>Establishing Your Coding Standards</header>
+            <p>Your coding standards or CSS style guide refers to the way your team has agreed 
+                on writing CSS. This includes the best practices on writing code, like formatting, 
+                naming, and syntax conventions. Many companies have shared the way they do it (this 
+                article from CSS-Tricks has a great compilation: CSS Style Guides). Here are a 
+                couple of ways I find it useful to share this type of information:</p>
+            <p>Don’ts vs. Do’s List<br>
+                Use this format to point out the things that you want to avoid, while providing 
+                a viable alternative. This removes ambiguity and encourages people to do a 
+                specific thing.</p>
+            <p>Best Practices List
+                Summarize your guidelines into best practices and include examples. This will 
+                make each one easier to read and understand.</p>
             
         </section>
         <section class="main-section" id="long-stylesheets">
             <header>Avoid Long Stylesheets</header>
+            <p>When you break your styles into smaller and more focused stylesheets it’s easier
+                to document them. You can also save time by not having to document what becomes
+                self-explanatory.<br>
+                For example, instead of having one 800 line stylesheet with all the variables 
+                that you can use in a theme, you can have a file for each of the variable types. 
+                This will save time by not having to scroll up and down in the file trying to 
+                find something! Think as well of the time that you can save by not having to 
+                update the index every time you add or rename a new section.</p>
+            <p>Another example to consider when working in large applications is the modlet 
+                workflow. It explains why working with smaller files organized by components 
+                allows testing and assembling them in your app more easily.</p>
             
         </section>
         <section class="main-section" id="sections">
             <header>Breakdown Your Stylesheets into Sections</header>
-            
+            <p>Once you have broken down your stylesheets into more manageable files, then you 
+                can continue this exercise by breaking down each style into individual sections.<br>
+                To begin with, each stylesheet should at least include a title and (when useful) 
+                a short description. The title could be as simple as the name of the file, 
+                capitalized to look more like a title (ex: “Buttons” for the stylesheet 
+                “buttons.css”), or it could be the same as the name of the file, like this:<br>
+            <code>
+                /**<br>
+                 * icons.css<br>
+                 */<br><br>
+                 
+                .icon {<br>
+                  font-family: 'bitovi';<br>
+                  speak: none;<br>
+                  font-style: normal;<br>
+                  font-weight: normal;<br>
+                  font-variant: normal;<br>
+                  text-transform: none;<br>
+                  line-height: 1;<br>
+                }</code></p>
+                <p>I find using the filename particularly useful when debugging the code in the 
+                    browser, and mostly when the file has been compiled with other files, 
+                    as I can get a reference to the file where the style lives.<br></p>
         </section>
         <section class="main-section" id="index">
             <header>Index the Contents of Your Stylesheets</header>
-            
+            <p>This is a great way to provide a snapshot of what’s in the stylesheet and a must 
+                in those projects where, for whatever reason, long stylesheets are there to stay 
+                (not a fan of those projects, but they do happen!).</p>
+            <p>A stylesheet index typically looks like this:</p>
+            <code>
+                /**<br>
+                 * icons.css<br>
+                 *<br>
+                 * Icons should convey in a simple and meaningful way the concept of the function<br>
+                 * they represent. When designing new icons be sure to remove any complexities<br> 
+                 * and follow the linear and lightweight appearance of the icon set.<br>
+                 *<br>
+                 * Index<br>
+                 * - Icon Font<br>
+                 * - Icon Variations<br>
+                 * - Icon Animations<br>
+                 *<br>
+                 */
+            </code>
+            <p>And although I love how neat and useful they can be, I have to admit they can be 
+                easily forgotten, and therefore outdated. They are also a pain to update when they 
+                are long and you are using numerals (so avoid those!)</p>
+            <p>An alternative way of using indexes is to let a style guide generator do the work 
+                for you by looking at your stylesheets, finding the sections that you have defined 
+                and generate an index for you. I will expand more on this topic at the end of this 
+                article.</p>
         </section>
         
         <!-- include 10 <p>, 5 <code>, 5 <li>, 1 @media -->
