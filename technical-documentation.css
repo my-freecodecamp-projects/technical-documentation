@@ -9,6 +9,8 @@ body {
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
     font-size: 16px;
+
+    /* Creating grid */
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
@@ -31,7 +33,6 @@ nav, main {
     margin-top: 15px;
     padding: 20px;
 }
-
 nav {
     margin-left: 25px;
 }
@@ -53,3 +54,15 @@ h3 {
     margin-bottom: 0rem;
 }
 
+/* Color Styling */
+nav {
+    background-color: #000ea6;
+    color: white;
+}
+main {
+    background-color: #e0e3ff;
+    color: #000752;
+}
+.nav-link {
+    color: white;
+}
