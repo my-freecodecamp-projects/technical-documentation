@@ -72,6 +72,36 @@
             <p>Another key element to point out here is where new styles should be added and
                 any steps that should be followed. The example above demonstrates this, but given 
                 the inheritance nature of CSS, it can be worthwhile to state it in detail.</p>
+            <p>For example, in projects where we used Bootstrap as an underlying framework, we 
+                typically have three places where new rules should go, depending on what the developer 
+                is trying to achieve. So we added a guide to the documentation comprising 
+                three scenarios:</p>
+            <p>Scenario #1<br>
+                If you want to overwrite a style defined by Bootstrap, then:<br>
+                <ol>
+                    <li>Find out in which stylesheet of the bootstrap framework the rule is 
+                        defined.</li>
+                    <li>Go to “src/styles/bootstrap-custom”.</li>
+                    <li>Look for the same stylesheet.</li>
+                    <li>If it doesn't exist, create a new one in that directory, with the s
+                        ame name.</li>
+                    <li>Add your overwrite and point out anything of importance.</li>
+                    <li>Lastly, import the new stylesheet in “src/styles/style.less”.</li>
+                </ol>
+            Scenario #2<br>
+            If you want to add a new style definition that is not overwriting Bootstrap 
+            and that should be available anywhere in the application, then:<br>
+            <ol>
+                <li>Go to “src/styles/custom”.</li>
+                <li>Find a stylesheet where the new style could be added (think: is 
+                    this a style for defining a button, or is it a reusable style like a 
+                    mixin?) and place it where it makes the most sense.</li>
+                <li>If there isn’t a stylesheet where it makes sense to put this new 
+                    style, then create a new one.</li>
+                <li>Name it following our naming conventions.</li>
+                <li>Add your new style and point out anything of importance.</li>
+                <li>Lastly, import the new stylesheet in “src/styles/style.less”.</li>
+            </ol>
         </section>
         <section class="main-section" id="coding-standards">
             <header><h2>Establishing Your Coding Standards</h2></header>
