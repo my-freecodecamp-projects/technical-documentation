@@ -39,3 +39,17 @@ main {
     margin-right: 30px;
 }
 
+/* Header styles */
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+}
+
