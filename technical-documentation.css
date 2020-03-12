@@ -84,3 +84,7 @@ nav {
 .nav-link:hover, .nav-link:active {
     color: white;
 }
+nav {
+    display: flex;
+    flex-direction: column;
+}
