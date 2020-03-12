@@ -73,3 +73,14 @@ nav {
     top: 0;
     height: 100vh;
 }
+
+/* Style the links */
+.nav-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #e0e3ff;
+}
+.nav-link:hover, .nav-link:active {
+    color: white;
+}
