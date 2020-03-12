@@ -9,14 +9,14 @@ body {
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
     font-size: 16px;
-
-    /* Creating grid */
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
+     /* Creating grid */
+     display:grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-areas:
+        "header header header header"
         "nav main main main";
-    gap: 5px;
-    box-sizing: border-box;
+     gap: 1px;
+     box-sizing: border-box;
 }
 
 /* Naming the grid areas */
@@ -26,17 +26,21 @@ body {
 #main-doc {
     grid-area: main;
 }
+#page-title {
+    grid-area: header;
+}
 
 /* Basic box formatting for both the main section and the
 navigation bar */
-nav, main {
+#page-title, nav, main {
     padding: 30px;
 }
 
 /* Header styles */
 h1 {
-    font-size: 3rem;
-    margin: 0;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 h2 {
     font-size: 2rem;
@@ -52,7 +56,7 @@ h3 {
 }
 
 /* Color Styling */
-nav {
+#page-title, nav {
     background-color: #000ea6;
     color: white;
 }

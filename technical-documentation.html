@@ -12,10 +12,8 @@
 </head>
 
 <body>
-
-
+    <header id="page-title"><h1>8 Best Practices for Perfect CSS Documentation</h1></header>
     <nav id="navbar"> <!-- shown to left of screen on regular sized devices -->
-        <header><h1>8 Best Practices for Perfect CSS Documentation</h1></header>
         <p><a class="nav-link" href="#ground-rules">Set the Ground Rules</a></p>
         <p><a class="nav-link" href="#structure">Explain the Structure of Your Code Base</a></p>
         <p><a class="nav-link" href="#coding-standards">Establishing Your Coding Standards</a></p>
@@ -23,9 +21,6 @@
         <p><a class="nav-link" href="#sections">Breakdown Your Stylesheets into Sections</a></p>
         <p><a class="nav-link" href="#index">Index the Contents of Your Stylesheets</a></p>
     </nav>
-
-
-
 
     <main id="main-doc">
         <section class="main-section" id="ground-rules">
@@ -142,17 +137,17 @@
                 “buttons.css”), or it could be the same as the name of the file, like this:<br>
             <code>
                 /**<br>
-                 * icons.css<br>
-                 */<br><br>
-                 
+                * icons.css<br>
+                */<br><br>
+                
                 .icon {<br>
-                  font-family: 'bitovi';<br>
-                  speak: none;<br>
-                  font-style: normal;<br>
-                  font-weight: normal;<br>
-                  font-variant: normal;<br>
-                  text-transform: none;<br>
-                  line-height: 1;<br>
+                font-family: 'bitovi';<br>
+                speak: none;<br>
+                font-style: normal;<br>
+                font-weight: normal;<br>
+                font-variant: normal;<br>
+                text-transform: none;<br>
+                line-height: 1;<br>
                 }</code></p>
                 <p>I find using the filename particularly useful when debugging the code in the 
                     browser, and mostly when the file has been compiled with other files, 
@@ -166,18 +161,18 @@
             <p>A stylesheet index typically looks like this:</p>
             <code>
                 /**<br>
-                 * icons.css<br>
-                 *<br>
-                 * Icons should convey in a simple and meaningful way the concept of the function<br>
-                 * they represent. When designing new icons be sure to remove any complexities<br> 
-                 * and follow the linear and lightweight appearance of the icon set.<br>
-                 *<br>
-                 * Index<br>
-                 * - Icon Font<br>
-                 * - Icon Variations<br>
-                 * - Icon Animations<br>
-                 *<br>
-                 */
+                * icons.css<br>
+                *<br>
+                * Icons should convey in a simple and meaningful way the concept of the function<br>
+                * they represent. When designing new icons be sure to remove any complexities<br> 
+                * and follow the linear and lightweight appearance of the icon set.<br>
+                *<br>
+                * Index<br>
+                * - Icon Font<br>
+                * - Icon Variations<br>
+                * - Icon Animations<br>
+                *<br>
+                */
             </code>
             <p>And although I love how neat and useful they can be, I have to admit they can be 
                 easily forgotten, and therefore outdated. They are also a pain to update when they 
@@ -186,9 +181,7 @@
                 for you by looking at your stylesheets, finding the sections that you have defined 
                 and generate an index for you. I will expand more on this topic at the end of this 
                 article.</p>
-        </section>
-        
-        <!-- include 10 <p>, 5 <code>, 5 <li>, 1 @media -->
-    </main>
+        </section> <!-- end last section-->
+    </main> <!-- end main section of articles -->
 </body>
 </html>
