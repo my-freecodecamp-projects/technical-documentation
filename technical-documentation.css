@@ -30,7 +30,6 @@ body {
 /* Basic box formatting for both the main section and the
 navigation bar */
 nav, main {
-    border: 2pt solid black;
     padding: 30px;
 }
 
