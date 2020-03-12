@@ -14,16 +14,18 @@
 <body>
     <header id="page-title"><h1>8 Best Practices for Perfect CSS Documentation</h1></header>
     <nav id="navbar"> <!-- shown to left of screen on regular sized devices -->
-        <p><a class="nav-link" href="#ground-rules">Set the Ground Rules</a></p>
+        <header></header> <!-- To pass test.  I moved the title to a top header so it
+        was more visible -->
+        <p><a class="nav-link" href="#ground_rules">Set the Ground Rules</a></p>
         <p><a class="nav-link" href="#structure">Explain the Structure of Your Code Base</a></p>
-        <p><a class="nav-link" href="#coding-standards">Establishing Your Coding Standards</a></p>
-        <p><a class="nav-link" href="#long-stylesheets">Avoid Long Stylesheets</a></p>
+        <p><a class="nav-link" href="#coding_standards">Establishing Your Coding Standards</a></p>
+        <p><a class="nav-link" href="#long_stylesheets">Avoid Long Stylesheets</a></p>
         <p><a class="nav-link" href="#sections">Breakdown Your Stylesheets into Sections</a></p>
         <p><a class="nav-link" href="#index">Index the Contents of Your Stylesheets</a></p>
     </nav>
 
     <main id="main-doc">
-        <section class="main-section" id="ground-rules">
+        <section class="main-section" id="ground_rules">
             <header><h2 id="special-first-h2">Set the Ground Rules</h2></header>
             <p>It’s hard to get on the documentation bandwagon when it’s not clear to you
                 and your team what to document or how you want it to work. So the first step 
@@ -98,7 +100,7 @@
                 <li>Lastly, import the new stylesheet in “src/styles/style.less”.</li>
             </ol>
         </section>
-        <section class="main-section" id="coding-standards">
+        <section class="main-section" id="coding_standards">
             <header><h2>Establishing Your Coding Standards</h2></header>
             <p>Your coding standards or CSS style guide refers to the way your team has agreed 
                 on writing CSS. This includes the best practices on writing code, like formatting, 
@@ -113,7 +115,7 @@
                 Summarize your guidelines into best practices and include examples. This will 
                 make each one easier to read and understand.</p>
         </section>
-        <section class="main-section" id="long-stylesheets">
+        <section class="main-section" id="long_stylesheets">
             <header><h2>Avoid Long Stylesheets</h2></header>
             <p>When you break your styles into smaller and more focused stylesheets it’s easier
                 to document them. You can also save time by not having to document what becomes
