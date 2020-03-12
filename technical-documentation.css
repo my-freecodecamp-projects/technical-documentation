@@ -5,7 +5,19 @@
 There will be a narrow navigation bar along the left hand side
 and the main article will be on the right hand side. */
 
+/* Index
+    Body - reset and create grid
+    Name grid areas - #page-title, #nav-bar, #main-doc
+    Padding for main sections - #page-title, nav, main
+    Heading styles - h1, h2, #special-first-h2, h3
+    Color styling
+    Fixed position for nav
+    Links - styling
+    Media query - one column for small screens
+*/
+
 body {
+    /* reset defaults */
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
     font-size: 16px;
@@ -20,15 +32,16 @@ body {
 }
 
 /* Naming the grid areas */
+#page-title {
+    grid-area: header;
+}
 #nav-bar {
     grid-area: nav;
 }
 #main-doc {
     grid-area: main;
 }
-#page-title {
-    grid-area: header;
-}
+
 
 /* Basic box formatting for both the main section and the
 navigation bar */
@@ -36,7 +49,7 @@ navigation bar */
     padding: 30px;
 }
 
-/* Header styles */
+/* Heading styles */
 h1 {
     font-size: 2.5rem;
     margin-top: 0;
@@ -86,4 +99,17 @@ nav {
 }
 .nav-link:hover, .nav-link:active {
     color: white;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        display:flex;
+        flex-direction: column;
+        grid-template-columns: none;
+        grid-template-areas: none;
+    }
+    nav {
+        position: static;
+        height: auto;
+    }
 }
