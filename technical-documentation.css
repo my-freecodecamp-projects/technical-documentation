@@ -57,12 +57,11 @@ h3 {
 
 /* Color Styling */
 #page-title, nav {
-    background-color: #000ea6;
+    background-color: #000752;
     color: white;
 }
 main {
     background-color: #e0e3ff;
-    color: #000752;
     color: black;
 }
 .nav-link {
