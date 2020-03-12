@@ -30,17 +30,22 @@ body {
 /* Basic box formatting for both the main section and the
 navigation bar */
 nav, main {
-    padding: 20px;
+    border: 2pt solid black;
+    padding: 30px;
 }
 
 /* Header styles */
 h1 {
     font-size: 3rem;
+    margin: 0;
 }
 h2 {
     font-size: 2rem;
     margin-top: 4rem;
     margin-bottom: 1rem;
+}
+#special-first-h2 {
+    margin-top: 0;
 }
 h3 {
     font-size: 1.5rem;
