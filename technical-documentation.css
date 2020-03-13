@@ -84,9 +84,8 @@ main {
 
 /* Fix left column navigation bar */
 #navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
-    height: 100vh;
     display: flex;
     flex-direction: column;
 }
