@@ -25,16 +25,12 @@ body {
      display:grid;
      grid-template-columns: repeat(4, 1fr);
      grid-template-areas:
-        "header header header header"
         "nav main main main";
      gap: 1px;
      box-sizing: border-box;
 }
 
 /* Naming the grid areas */
-#page-title {
-    grid-area: header;
-}
 #nav-bar {
     grid-area: nav;
 }
@@ -45,7 +41,7 @@ body {
 
 /* Basic box formatting for both the main section and the
 navigation bar */
-#page-title, nav, main {
+nav, main {
     padding: 30px;
 }
 

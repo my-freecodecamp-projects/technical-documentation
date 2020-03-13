@@ -12,10 +12,9 @@
 </head>
 
 <body>
-    <header id="page-title"><h1>8 Best Practices for Perfect CSS Documentation</h1></header>
+    
     <nav id="navbar"> <!-- shown to left of screen on regular sized devices -->
-        <header></header> <!-- To pass test.  I moved the title to a top header so it
-        was more visible -->
+        <header id="page-title"><h1>8 Best Practices for Perfect CSS Documentation</h1></header>
         <p><a class="nav-link" href="#set_the_ground_rules">Set the Ground Rules</a></p>
         <p><a class="nav-link" href="#explain_the_structure_of_your_code_base">
             Explain the Structure of Your Code Base</a></p>
@@ -132,8 +131,8 @@
             <p>Another example to consider when working in large applications is the modlet 
                 workflow. It explains why working with smaller files organized by components 
                 allows testing and assembling them in your app more easily.</p>
-            <code>In a long file, a long index...<br>
-                /*-------------------------------------------*\<br>
+            <h3>In a long file, a long index...</h3><br>
+            <code>/*-------------------------------------------*\<br>
                    variables.less<br><br>
                     Index<br>
                    - Color Palette<br>
@@ -147,13 +146,9 @@
                    - Carousel<br>
                    - Jumbotron<br>
                 \*-------------------------------------------*/<br></code>
-                <img href="frickersolutions.com/images/variables-folder.png">
-
-
-
-
-
-
+            Breaking a file, no index is necessary:<br>
+            <img src="frickersolutions.com/images/variables-folder.png" alt="folder of css
+                files" width="200px">
 
         </section>
         <section class="main-section" id="breakdown_your_stylesheets_into_sections">
