@@ -63,6 +63,11 @@ h3 {
     font-size: 1.5rem;
     margin-bottom: 0rem;
 }
+code {
+    background-color: #d6daff;
+    border: 0.5px solid #c9cfff;
+    border-radius: 5px;
+}
 
 /* Color Styling */
 #page-title, nav {
