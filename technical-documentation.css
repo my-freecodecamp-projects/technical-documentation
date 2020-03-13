@@ -97,12 +97,18 @@ main {
     color: white;
 }
 
+/* Style the table */
 table {
+    width: 100%;
     margin-top: 20px;
-    padding: 15px;
-
-
 }
+table, tr, th, td {
+    padding: 15px;
+    border: 1pt solid black;
+    border-collapse: collapse;
+}
+
+/* Media query for small screens */
 @media screen and (max-width: 500px) {
     body {
         display:flex;
