@@ -82,7 +82,7 @@ main {
 }
 
 /* Fix left column navigation bar */
-nav {
+#navbar {
     position: sticky;
     top: 0;
     height: 100vh;
