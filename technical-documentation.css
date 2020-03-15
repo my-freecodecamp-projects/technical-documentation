@@ -1,17 +1,24 @@
 /* CSS stylesheet for HTML document, technical-document.html */
 
 
-/* The body with standard settings and the creation of the grid.
-There will be a narrow navigation bar along the left hand side
-and the main article will be on the right hand side. */
+/* This is a website is a technical document based on the website 
+"8 Best Practices for Perfect CSS Documentation" found at:
+https://webdesign.tutsplus.com/articles/css-documentation-best-practices--cms-30139
+written by Adriana De La Cuadra.  One of her bios is found at:
+https://tutsplus.com/authors/adriana-de-la-cuadra?_ga=2.46664993.708236404.1584233108-1153623539.1583938046
+
+My layout will use flexbox with a fixed width left hand section
+that contains navigation links to the main sections in the documentation 
+to the right in a section that grows to fill the rest of the screen.
+The navigation section will be fixed so that it remains visible as 
+the right section scrolls.
 
 /* Index
-    Body - reset and create grid
-    Name grid areas - #page-title, #nav-bar, #main-doc
+    Body - default and fonts
+    Flexbox creation
     Padding for main sections - #page-title, nav, main
     Heading styles - h1, h2, #special-first-h2, h3
     Color styling
-    Fixed position for nav
     Links - styling
     Media query - one column for small screens
 */
@@ -23,6 +30,7 @@ body {
     font-size: 16px;
 }
 
+/* Flexbox creation */
 .container {
     display: flex;
 }
@@ -119,11 +127,8 @@ table, tr, th, td {
     body {
         display:flex;
         flex-direction: column;
-        grid-template-columns: none;
-        grid-template-areas: none;
     }
     nav {
         position: static;
-        height: auto;
     }
 }

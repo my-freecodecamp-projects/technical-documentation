@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="technical-documentation.css">
 </head>
 
-<body class="container">
+<body class="container"> <!-- outer container for 2 flex columns -->
     
-    <nav id="navbar" class="item"> <!-- shown to left of screen on regular sized devices -->
+    <nav id="navbar" class="item"> <!-- shown to left of screen on regular sized devices 
+    and fixed to top so that it is visible while scrolling the main content on right -->
         <header id="page-title"><h1>8 Best Practices for Perfect CSS Documentation</h1></header>
         <p><a class="nav-link" href="#set_the_ground_rules">Set the Ground Rules</a></p>
         <p><a class="nav-link" href="#explain_the_structure_of_your_code_base">
@@ -27,7 +28,7 @@
             Index the Contents of Your Stylesheets</a></p>
     </nav>
 
-    <main id="main-doc">
+    <main id="main-doc"> <!-- shown to right of screen on regular sized devices-->
         <section class="main-section" id="set_the_ground_rules">
             <header><h2 id="special-first-h2">Set the Ground Rules</h2></header>
             <p>It’s hard to get on the documentation bandwagon when it’s not clear to you
