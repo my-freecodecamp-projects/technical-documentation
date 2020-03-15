@@ -21,23 +21,24 @@ body {
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
     font-size: 16px;
-     /* Creating grid */
-     display:grid;
-     grid-template-columns: repeat(4, 1fr);
-     grid-template-areas:
-        "nav main main main";
-     gap: 1px;
-     box-sizing: border-box;
 }
 
-/* Naming the grid areas */
-#nav-bar {
-    grid-area: nav;
+.container {
+    display: flex;
 }
+
+.item {
+    width: 330px;
+}
+
 #main-doc {
-    grid-area: main;
+    flex-grow: 1;
 }
 
+#navbar {
+    position: fixed;
+    top: 0;
+}
 
 /* Basic box formatting for both the main section and the
 navigation bar */
